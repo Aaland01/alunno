@@ -1,5 +1,6 @@
 
 var create_footer = function () {
+
     //creating most of elements used in the coming if/else checks
     let footer = document.createElement('footer');
     let centerBlock = document.createElement('div');
@@ -7,23 +8,51 @@ var create_footer = function () {
     let socials = document.createElement('div');
     socials.className="socials";
     centerBlock.appendChild(socials);
-    let image2= document.createElement('img');
-    image2.id="footerlogo";
-    image2.alt="Logo";
+    let footerLogo= document.createElement('img');
+    footerLogo.id="footerlogo";
+    footerLogo.alt="Logo";
 
     //Social buttons
-    let some = ["instagram","facebook","twitter","tiktok"];
+    let socialMedia = ["instagram","facebook","twitter","tiktok"];
 
     //Make sure the pointers are right according to index page
-    var title = document.title;
-    if(title=="Alunno"){
-        for(app of some){
+    let path = "";
+    let contactPath = "";
+
+    if (document.title == "Alunno") {
+        path = ""
+        contactPath = "page/"
+    } else {
+        path = "../";
+        contactPath = "";
+    }
+
+    for(appName of socialMedia){
+        let socialButton = document.createElement('a');
+        socialButton.href = "https://" + appName + ".com";
+        socialButton.title = appName;
+        let image = document.createElement('img');
+        image.src = path + "img/social_media/" + appName + ".png";
+        image.alt = appName +" Logo";
+        socialButton.appendChild(image);
+        socials.appendChild(socialButton);
+    }
+    let contactUs = document.createElement('a');
+
+    contactUs.href = contactPath + "about.html";
+    contactUs.id = "contactUs";
+    contactUs.innerHTML = "Kontakt oss";
+    centerBlock.appendChild(contactUs);
+    footerLogo.src = path + "img/Logo.png";
+
+    /* if(title == "Alunno"){
+        for(appName of socialMedia){
             let el = document.createElement('a');
-            el.href="https://" + app +".com";
-            el.title=app;
+            el.href="https://" + appName +".com";
+            el.title=appName;
             let image = document.createElement('img');
-            image.src="img/social_media/"+app+".png";
-            image.alt=app+" Logo";
+            image.src="img/social_media/"+appName+".png";
+            image.alt=appName+" Logo";
             el.appendChild(image);
             socials.appendChild(el);
         }
@@ -32,17 +61,17 @@ var create_footer = function () {
         temp.id="contactUs";
         temp.innerHTML="Kontakt oss";
         centerBlock.appendChild(temp);
-        image2.src="img/Logo.png";
-    }
+        footerLogo.src="img/Logo.png";
+    } */
     
-    else{
-        for(app of some){
+    /* else{
+        for(appName of socialMedia){
             let el = document.createElement('a');
-            el.href="https://" + app +".com";
-            el.title=app;
+            el.href="https://" + appName +".com";
+            el.title=appName;
             let image = document.createElement('img');
-            image.src="../img/social_media/"+app+".png";
-            image.alt=app+" Logo";
+            image.src="../img/social_media/"+appName+".png";
+            image.alt=appName+" Logo";
             el.appendChild(image);
             socials.appendChild(el);
         }
@@ -51,15 +80,15 @@ var create_footer = function () {
         temp.id="contactUs";
         temp.innerHTML="Kontakt oss";
         centerBlock.appendChild(temp);
-        image2.src="../img/Logo.png";
-    }
+        footerLogo.src="../img/Logo.png";
+    } */
 
     footer.appendChild(centerBlock)
 
     let rightBlock = document.createElement('div');
     rightBlock.id="rightBlock";
     
-    rightBlock.appendChild(image2);
+    rightBlock.appendChild(footerLogo);
     let personvern = document.createElement('a');
     personvern.href="https://www.datatilsynet.no/rettigheter-og-plikter/hva-er-personvern/";
     personvern.target="_blank";
