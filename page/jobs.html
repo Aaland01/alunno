@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="no">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Søk Jobb</title>
+    <link rel="stylesheet" href="../style.css">
+
+   <script src="../scripts/sentForm.js" defer></script>
+  </head>
+
+  <body>
+    <script src="../scripts/header.js"></script>
+
+    <main>
+      <h1 class="topTitle">Søk jobb</h1>
+      <div id="jobContainer">
+        <div>
+          <img src="../img/pizzajobb.jpg" alt="Pizza photo">
+        </div>
+        <div id="jobInputContainer">
+          <form action="registerForm.html?sender=jobs.html" method="post" id="jobForm">
+            <div id="aboutyou">
+              <h3>Om deg:</h3>
+              <label for="navn">Navn:</label>
+              <input type="text" id="navn" required>
+              <label for="epost">E-post:</label>
+              <input type="email" id="epost" required>
+              <label for="phone">Telefonnummer:</label>
+              <input type="text" id="phone" required>
+            </div>
+
+            <div id="lastopp">
+              <h3>Last opp:</h3>
+              <div>CV:</div>
+              <input type="file" id="cvFile" name="cv" required>
+              <div>SØKNAD:</div>
+              <input type="file" id="applicationFile" name="application" required>
+            </div>
+            <input type="submit" id="submitBtn" value="Send søknad" style="font-size : 18px">
+
+          </form>
+
+        </div>
+        <div>
+          <img src="../img/beerjobb.jpg" alt="Beer">
+        </div>
+      </div>
+
+    </main>
+
+    <script src="../scripts/footer.js"></script>
+  </body>
+</html>

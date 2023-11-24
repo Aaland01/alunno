@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="no">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Booking</title>
+    <meta name="description" content="Bordbestilling til restauranten.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+
+    <script src="../scripts/sentForm.js" defer></script>
+  </head>
+
+  <body>
+    <script src="../scripts/header.js"></script>
+    <main>
+      <h1 class="topTitle">Bordbestilling</h1>
+      <div id="bookingContainer">
+        <div>
+          <img src="../img/beerjobb.jpg" alt="Restaurant bilde">
+        </div>
+        <div id="bookingInputContainer">
+          <form action="registerForm.html?sender=booking.html" method="post" id="bookingForm">
+            <div id="omdeg">
+              <h3>Om deg:</h3>
+              <label for="navninput">Navn:</label>
+              <input type="text" id="navninput" required>
+              <label for="epostinput">E-post:</label>
+              <input type="email" id="epostinput" required>
+              <label for="nummerinput">Telefonnummer:</label>
+              <input type="tel" pattern="[0-9]{8}" id="nummerinput" required>
+              <label for="antallinput">Antall personer:</label>
+              <input type="number" name="antall" id="antallinput" min="1" required>
+            </div>
+            <div id="velgdato">
+              <h3>Velg dato:</h3>
+              <input type="datetime-local" id="Test_DatetimeLocal" required>
+            </div>
+            <input type="submit" id="submitBtn" value="Book bord">
+          </form>
+
+        </div>
+        <div>
+          <img src="../img/bildebord.jpg" alt="Restaurant bilde" id="rightimg">
+        </div>
+      </div>
+      
+      
+    </main>
+    <script src="../scripts/footer.js"></script>
+  </body>
+</html>

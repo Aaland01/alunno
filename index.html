@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Alunno</title>
+
+    <script src="scripts/slideshow.js" defer></script>
+    <script src="scripts/openingHours.js" defer></script>
+
+  </head>
+  <body>
+    <script src="scripts/header.js"></script>
+    <main>
+      <div class="slideshow">
+
+        <div class="mySlides" data-status="active" data-index="0">
+          <img src="img/slideshow/1.png" style="width:100%" alt="Restauranten">
+        </div>
+      
+        <div class="mySlides" data-status="inactive" data-index="1">
+          <img src="img/slideshow/2.png" style="width:100%" alt="Pizza">
+        </div>
+      
+        <div class="mySlides" data-status="inactive" style="left:-100%" data-index="2">
+          <img src="img/slideshow/3.png" style="width:100%" alt="Baren">
+        </div>
+
+      </div>
+
+      <div class="box" id="openingHoursBox">
+        <p id="openNow">Vi er åpne.</p>
+        <h1 id="openinghours">Åpningstider:</h1>
+        <p id="weekdays">Man-Lør: 13.00-23.00</p>
+        <p id="weekend">Søn: Stengt</p>
+      </div>
+
+    </main>
+
+    <script src="scripts/footer.js"></script>
+  </body>
+</html>

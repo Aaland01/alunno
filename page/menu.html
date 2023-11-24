@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8">
+    <title>Meny</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="../scripts/filterMenu.js" defer></script>
+    <script src="../scripts/menuSearch.js" defer></script>
+  </head>
+  <body>
+    <script src="../scripts/header.js"></script>
+    <main>
+      <h1 class="topTitle"> Meny </h1>
+      <form action="menu.html" id="filterForm" method="get">
+        <div>
+        <input id ="gluten" type="checkbox" class="menuFilterBtn" data-allergy="gluten">
+        <label for="gluten">Gluten</label>
+        <input id="milk" type="checkbox" class="menuFilterBtn" data-allergy="milk">
+        <label for="milk">Melk</label>
+        <input id="egg" type="checkbox" class="menuFilterBtn" data-allergy="egg">
+        <label for="egg">Egg</label>
+        <input id="vegan" type="checkbox" class="menuFilterBtn" data-allergy="vegan">
+        <label for="vegan">Vegetar</label>
+        </div>
+        <input id="search" name="query" type="text" placeholder="Søk..."> <input type="submit" value="Søk">
+      </form>
+
+      <div id="menuContainer" class="container">
+        <div id="antipasti" class="menu-box">
+          <fieldset>
+            <legend>Antipasti</legend>
+            <div class="dish" data-allergenfree="egg">
+              <h2>Bruchetta.............................149,-</h2>
+              <h3>parmaskinke, mozzarella di Burrata, grønn pesto, tomat og ristede pinjekjerner</h3>
+            </div>
+            <div class="dish" data-allergenfree="">
+              <h2>Kyllingsalat..........................149,-</h2>
+              <h3>kyllingbryst, hjertesalat, hvitløkskrutonger, parmesanmajones, tomat, bacon og egg</h3>
+            </div>
+            <div class="dish" data-allergenfree="gluten egg">
+              <h2>Avokadosalat.......................149,-</h2>
+              <h3>hjertesalat, avocado, cherrytomat, rødløk, fetaost, ristede mandler, lime og chilidressing</h3>
+            </div>
+            <div class="dish" data-allergenfree="gluten egg">
+              <h2>Antipasto misto...................149,-</h2>
+              <h3>et utvalg av italiensk spekemat og ost, servert med marinerte grønnsaker, melon og honning</h3>
+            </div>
+          </fieldset>
+        </div>
+        <div id="pizza" class="menu-box">
+          <fieldset>
+            <legend>Pizza</legend>
+            <div class="dish" data-allergenfree="egg">
+              <h2>Margerita............................149,-</h2>
+              <h3>tomat, fersk mozzarella, basilikum og olivenolje</h3>
+            </div>
+            <div class="dish" data-allergenfree="egg">
+              <h2>Parma.................................149,-</h2>
+              <h3>tomat, fersk mozzarella, parmaskinke, ruccula og parmesan</h3>
+            </div>
+            <div class="dish" data-allergenfree="egg">
+              <h2>Pizza prosciutto..................149,-</h2>
+              <h3>tomat, fersk mozzarella, skinke, sopp og ruccula</h3>
+            </div>
+            <div class="dish" data-allergenfree="egg">
+              <h2>Pizza pollo..........................149,-</h2>
+              <h3>tomat, fersk mozzarella, kylling, ruccula og pesto</h3>
+            </div>
+            <div class="dish" data-allergenfree="egg vegan milk">
+              <h2>Vegan.................................149,-</h2>
+              <h3>tomat, sopp, oliven, rødløk, paprika og ruccula</h3>
+            </div>
+            <div class="dish" data-allergenfree="egg">
+              <h2>Calzone...............................149,-</h2>
+              <h3>innbakt pizza med tomat, fersk mozzarella, skinke og sopp</h3>
+            </div>
+          </fieldset>
+        </div>
+        <div id="pasta" class="menu-box">
+          <fieldset>
+            <legend>Pasta</legend>
+            <div class="dish" data-allergenfree="egg">
+              <h2>Spaghetti bolognese...........149,-</h2>
+              <h3>fersk pasta med bolognesesaus og parmesan</h3>
+            </div>
+            <div class="dish" data-allergenfree="egg">
+              <h2>Pasta carbonara..................149,-</h2>
+              <h3>fersk pasta med carbonarasaus, ruccula, bacon og sopp</h3>
+            </div>
+            <div class="dish" data-allergenfree="egg milk">
+              <h2>Linguini med sjømat...........149,-</h2>
+              <h3>fersk pasta med blåskjell, kongereker, blekksprut, kveite, hvitløk, chili, hvitving og cherrytomater</h3>
+            </div>
+          </fieldset>
+        </div>
+        <div id="dolci" class="menu-box">
+          <fieldset>
+            <legend>Dolci</legend>
+            <div class="dish" data-allergenfree="">
+              <h2>Tiramisu............................149,-</h2>
+              <h3>italiensk ostekake</h3>
+            </div>
+            <div class="dish" data-allergenfree="gluten egg">
+              <h2>Gelato................................149,-</h2>
+              <h3>velg blant tre typer italiensk is, serveres med krem og bærsaus</h3>
+            </div>
+            <div class="dish" data-allergenfree="gluten egg">
+              <h2>Panna cotta........................149,-</h2>
+              <h3>italiensk fløtepudding med vanilje og bærsaus</h3>
+            </div>
+            <div class="dish" data-allergenfree="milk vegan">
+              <h2>Panforte.............................149,-</h2>
+              <h3>italiensk sjokoladekake med mørk sjokolade, hasselnøtter, tørket frukt og honning</h3>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div id="photos" class="container">
+        <img src="../img/menu/lasagna.jpg" alt="lasagna" class="food">
+        <img src="../img/menu/pasta.jpg" alt="pasta" class="food">
+        <img src="../img/menu/pizza.jpg" alt="pizza" class="food">
+        <img src="../img/menu/salad.jpg" alt="salad" class="food">
+      </div>
+    </main>
+    <script src="../scripts/footer.js"></script>
+  </body>
+</html>

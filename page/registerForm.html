@@ -1,0 +1,15 @@
+<script defer>
+    window.onload = function() {
+        var messages = {
+            booking:"Din+bordbestilling+er+sendt!",
+            jobs:"Din+jobbsøknad+er+sendt!"
+        }
+        var url = window.location.href.split("?")[1];
+        var params = new URLSearchParams(url);
+        for(var pair of params) {
+            if(pair[0]=="sender") {
+                window.location = pair[1]+"?sent=1&sender="+messages[pair[1].split(".")[0]];
+            }
+        }
+    };
+</script>
