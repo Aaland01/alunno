@@ -37,51 +37,13 @@ var create_footer = function () {
         socialButton.appendChild(image);
         socials.appendChild(socialButton);
     }
-    let contactUs = document.createElement('a');
 
+    let contactUs = document.createElement('a');
     contactUs.href = contactPath + "about.html";
     contactUs.id = "contactUs";
     contactUs.innerHTML = "Kontakt oss";
     centerBlock.appendChild(contactUs);
     footerLogo.src = path + "img/Logo.png";
-
-    /* if(title == "Alunno"){
-        for(appName of socialMedia){
-            let el = document.createElement('a');
-            el.href="https://" + appName +".com";
-            el.title=appName;
-            let image = document.createElement('img');
-            image.src="img/social_media/"+appName+".png";
-            image.alt=appName+" Logo";
-            el.appendChild(image);
-            socials.appendChild(el);
-        }
-        let temp=document.createElement('a');
-        temp.href="page/about.html";
-        temp.id="contactUs";
-        temp.innerHTML="Kontakt oss";
-        centerBlock.appendChild(temp);
-        footerLogo.src="img/Logo.png";
-    } */
-    
-    /* else{
-        for(appName of socialMedia){
-            let el = document.createElement('a');
-            el.href="https://" + appName +".com";
-            el.title=appName;
-            let image = document.createElement('img');
-            image.src="../img/social_media/"+appName+".png";
-            image.alt=appName+" Logo";
-            el.appendChild(image);
-            socials.appendChild(el);
-        }
-        let temp=document.createElement('a');
-        temp.href="about.html";
-        temp.id="contactUs";
-        temp.innerHTML="Kontakt oss";
-        centerBlock.appendChild(temp);
-        footerLogo.src="../img/Logo.png";
-    } */
 
     footer.appendChild(centerBlock)
 
