@@ -1,9 +1,9 @@
 # alunno
-Prosjektarbeid Webutvikling
+Prosjektarbeid Webteknologi - Høsten 2022
 
 ## Beskrivelse
 
-Dette var et gruppeprosjekt om webutvikling, og vi var en gruppe på 6 studenter. 
+Dette var et gruppeprosjekt om webteknologi, i en gruppe på 6 studenter. 
 Vi skulle lage en nettside ved hjelp av HTML, CSS og Javascript
 
 Vi valgte å lage en nettside for en restaurant. 
